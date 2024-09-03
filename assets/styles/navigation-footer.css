@@ -1,0 +1,410 @@
+header {
+  height: max-content;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--nav-color);
+  padding: 10px 40px 10px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  color: var(--logo-color);
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+}
+
+header .logo h1 span {
+  display: flex;
+  text-align: left;
+  color: var(--logo-color);
+  font-size: .7rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+header .logo img {
+  position: absolute;
+  top: 0;
+  transform: translate(-98%, -7%);
+  width: 70px;
+}
+
+header nav .logo {
+  flex-basis: 0%;
+  padding-left: 50px;
+  white-space: nowrap;
+}
+
+header nav .navigation-bar{
+  transition: .3s;
+}
+
+header nav, .navigation-bar ul {
+  display: flex;
+  align-items: center;
+}
+
+header .navigation-bar.show {
+  width: 40%;
+  left: 0;
+  background: var(--navigation-bar);
+}
+
+header .navigation-bar.show .navlink a {
+  color: var(--navigation-bar-navlinks) !important;
+}
+
+header .navigation-bar.show ul li {
+  animation: show .6s backwards;
+}
+
+header .navigation-bar.show ul li.active {
+  animation-delay: .2s;
+}
+
+header .navigation-bar.show ul li:nth-child(2) {
+  animation-delay: .4s;
+}
+
+header .navigation-bar.show ul li:nth-child(3) {
+  animation-delay: .6s;
+}
+
+header .navigation-bar.show ul li:nth-child(4) {
+  animation-delay: .8s;
+}
+
+header .navigation-bar.show ul li:nth-child(5) {
+  animation-delay: 1s;
+}
+
+header .navigation-bar.show ul li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+header .navigation-bar.show ul .instagram__menu {
+  animation-delay: 1.4s;
+}
+
+header .navigation-bar.show ul .whatsapp__menu {
+  animation-delay: 1.6s;
+}
+
+header .navigation-bar.show .underline {
+  background: var(--navigation-bar-underline);
+}
+
+header .navigation-bar .navigation__links .navlink {
+  flex: 0 0 auto;
+  padding-inline: 0 20px;
+}
+
+header .navigation-bar .navigation__links .border {
+  height: 24px;
+  border-right: 1px solid var(--navigation-border);
+}
+
+header .navigation-bar a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: #fff;
+}
+
+header .navigation-bar .underline {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  translate: 0 4px;
+  background: var(--navigation-underline);
+  transition: 300ms ease-in-out;
+}
+
+.navigation-bar a:hover .underline,
+.navigation-bar a.active .underline{
+  width: 100%;
+}
+
+header nav .toggle {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: .3s;
+}
+
+header nav .toggle:focus {
+  outline: none;
+}
+
+header nav .toggle .hide {
+  transition: 0s;
+  visibility: hidden;
+}
+
+header nav .toggle.active {
+  left: 32%;
+}
+
+header nav .toggle.active .first {
+  top: 16px;
+  transform: rotate(-45deg);
+}
+
+header nav .toggle.active .last {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+header nav .navigation-bar a {
+  color: var(--navlinks);
+}
+
+header nav .toggle span {
+  display: block;
+  position: relative;
+  bottom: 5px;
+  width: 26px;
+  height: 2px;
+  background-color: var(--menu);
+  border-radius: 40px;
+  transition: .3s;
+}
+
+header nav .toggle span:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+
+.overlay{
+  display: none;
+}
+
+.switch {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+.switch-light,
+.switch-dark {
+  position: absolute;
+  top: 0;
+  left: 120%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in;
+}
+
+.switch-light {
+  color: var(--switch-color);
+  font-size: 1.4rem;
+  visibility: visible;
+}
+
+.darkmode .switch-light {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.switch-dark {
+  color: var(--switch-color);
+  font-size: 0;
+  visibility: hidden;
+}
+
+.darkmode .switch-dark {
+  font-size: 1.4rem;
+  visibility: visible;
+}
+
+header .navigation-bar.show :where(.instagram__menu, .whatsapp__menu) {
+  animation: show 0.6s backwards;
+}
+
+.socials__menu{
+  display: none;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.instagram__menu .whatsapp__menu{
+  display: none;
+}
+
+.instagram__menu{
+  width: 40px;
+  height: 40px;
+  background: var(--background-icone-instagram);
+  border: 1px solid var(--border-icone-instagram);
+  border-radius: 50px;
+  transition: 300ms ease-in;
+}
+
+.instagram__menu svg{
+  width: 24px;
+  height: 24px;
+  fill: var(--color-icone-instagram);
+}
+
+.instagram__menu svg:hover{
+  fill: #777;
+}
+
+.whatsapp__menu{
+  width: 40px;
+  height: 40px;
+  background: var(--background-icone-whatsapp);
+  border: 1px solid var(--border-icone-whatsapp);
+  border-radius: 50px;
+  transition: 300ms ease-in;
+}
+
+.whatsapp__menu svg{
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp__menu svg:hover{
+  fill: #777;
+}
+
+.navbar__right{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instagram__navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--background-icone-instagram);
+  border: 1px solid var(--border-icone-instagram);
+  border-radius: 50px;
+  transition: 300ms ease-in;
+}
+
+.instagram__navbar svg{
+  width: 22px;
+  height: 22px;
+  fill: var(--color-icone-instagram);
+  vertical-align: middle;
+}
+
+.whatsapp__navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--background-icone-whatsapp);
+  border: 1px solid var(--border-icone-whatsapp);
+  border-radius: 50px;
+  transition: 300ms ease-in;
+}
+
+.whatsapp__navbar svg{
+  width: 22px;
+  height: 22px;
+  color: var(--color-icone-whatsapp);
+  vertical-align: middle;
+}
+
+.instagram__navbar:hover{
+  background: rgb(242, 97, 34);
+}
+
+.whatsapp__navbar:hover{
+  background: #00bb2cd1;
+}
+
+:where(.whatsapp__navbar, .instagram__navbar):hover svg{
+  color: #fff;
+  fill: #fff;
+}
+
+footer {
+  background: var(--bg-footer);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+footer .container__footer {
+  display: block;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+footer .container__footer img {
+  position: absolute;
+  transform: translate(-50%, -110%);
+  width: 95px;
+  height: auto;
+}
+
+footer .container__footer .logo {
+  color: var(--color-primary--footer);
+  font-family: var(--logo);
+  font-size: 19px;
+  font-weight: 400;
+}
+
+footer .container__footer .slogan {
+  color: var(--color-primary--footer);
+  font-family: var(--font-system);
+  line-height: 27px;
+  font-weight: 300;
+}
+
+footer .container__footer .instagram{
+  color: var(--color-primary--footer);
+  padding-bottom: 20px;
+  width: max-content;
+  margin: auto;
+  font-weight: 300;
+}
+
+footer .container__footer .instagram:hover{
+  color: #ccc;
+}
+
+footer .container__footer span {
+  color: var(--color-primary--footer);
+  margin-top: 30px;
+  font-family: var(--font-system);
+  font-weight: 300;
+}
+
+footer h3{
+  color: var(--color-primary--footer);
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+footer h3 a:hover{
+  color: #858585;
+}
