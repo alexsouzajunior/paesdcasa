@@ -391,6 +391,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
@@ -441,13 +442,13 @@ p {
   }
 
   .product__card__item .product__card__content{
-    padding: 1rem;
+    padding: .5rem 1rem 1rem;
     text-align: center;
     line-height: 1.5;
   }
 
   .product__card__content .title{
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 500;
     color: var(--color__title__card);
     margin-bottom: 10px;

@@ -70,7 +70,7 @@
   }
   header .navigation-bar .switch {
     position: relative;
-    bottom: 312px;
+    bottom: 221px;
   }
   header .navigation-bar .navigation__links {
     display: block;
@@ -88,13 +88,8 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.707);
     z-index: 10;
-    /* opacity: 0;
-    visibility: hidden;
-    transition: 300ms ease-in-out; */
   }
   .overlay.active{
-    /* opacity: 1;
-    visibility: visible; */
     display: block;
   }
   .about__us .about__content img {

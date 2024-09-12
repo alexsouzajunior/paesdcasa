@@ -44,15 +44,14 @@
   --bg-text-ilustrativa: #111;
   --products-combos-order-color: #f6e9e0;
 
-  --background-buttons-filter: #F95738;
+  --background-buttons-filter: #f95738;
   --background-buttons-filter-hover: #ffa364;
   --bg-product__card-item: #fff;
   --color__title__card: #FF2700;
   --order-btn-background: #303880;
   --order-btn-background-hover: #1e2673;
   --order-btn-color: #f6e9e0;
-  --shadow__card: rgba(0, 0, 0, .02) 0 0 0 1px,
-   rgba(209, 213, 219, 0.545) 0 0 0 1px inset;
+  --shadow__card: rgba(0, 0, 0, .15) 0 3px 8px;
 
   --menu__card__title: #fd7118;
   --menu__card__description: #6C6868;
