@@ -127,6 +127,26 @@ $(document).ready(function () {
   }, 500);
 });
 
+const buttonsFilter = document.querySelectorAll('.btn__filter');
+const cardsProducts = document.querySelectorAll('.product__card__item');
+
+buttonsFilter.forEach((buttons) => {
+  buttons.addEventListener('click', () => {
+    buttonsFilter.forEach((buttons) => {
+      buttons.classList.remove('filter-active');
+    });
+    buttons.classList.add('filter-active');
+
+    const valueAttr = buttons.getAttribute('data-filter-product');
+    cardsProducts.forEach((product) => {
+      product.style.display = "none";
+      if (product.getAttribute('data-filter-product').toLowerCase() == valueAttr.toLowerCase() || valueAttr == "todos") {
+        product.style.display = "block";
+      }
+    });
+  });
+});
+
 $(document).ready(function(){
   
   $('a[href*=#]:not([href=#])').click(function() {

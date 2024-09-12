@@ -33,8 +33,8 @@
               <li class="navlink"><a class="active" href="#inicio"><span class="underline"></span>Início</a></li>
               <li class="navlink"><a href="#historia"><span class="underline"></span>Sobre nós</a></li>
               <li class="navlink"><a href="#produtos"><span class="underline"></span>Produtos</a></li>
-              <li class="navlink"><a href="#combos"><span class="underline"></span>Combos</a></li>
-              <li class="navlink"><a href="#posts"><span class="underline"></span>Posts</a></li>
+              <!-- <li class="navlink"><a href="#combos"><span class="underline"></span>Combos</a></li>
+              <li class="navlink"><a href="#posts"><span class="underline"></span>Posts</a></li> -->
               <li class="navlink"><a href="#avaliacoes"><span class="underline"></span>Avaliações</a></li>
               <span class="border"></span>
               <button class="switch" id="switch">
@@ -84,22 +84,23 @@
         </div>
       </nav>
       <div class="overlay"></div>
-      <main id="inicio" class="hero heroImage">
-        <div id="pictures"></div>
-        <div class="hero__content">
-          <h2>Seja bem vindo a <span>Pães d'Casa</span></h2>
-          <p>
-            Experimente as delícias da nossa padaria no Morada do Sol, Maracanã
-            São Luís - MA. Com qualidade e sabor que você merece!
-          </p>
-          <a href="#historia">
-            <button class="btn">
-              <span>Saber mais</span>
-            </button>
-          </a>
-        </div>
-      </main>
     </header>
+
+    <main id="inicio" class="hero heroImage">
+      <div id="pictures"></div>
+      <div class="hero__content">
+        <h2>Seja bem vindo a <span>Pães d'Casa</span></h2>
+        <p>
+          Experimente as delícias da nossa padaria no Morada do Sol, Maracanã
+          São Luís - MA. Com qualidade e sabor que você merece!
+        </p>
+        <a href="#historia">
+          <button class="btn">
+            <span>Saber mais</span>
+          </button>
+        </a>
+      </div>
+    </main>
 
     <section id="historia" class="about__us">
       <div class="about__content">
@@ -175,8 +176,14 @@
     </div>
 
     <div class="product__cards__container">
+      <div class="buttons__filter">
+        <button class="btn__filter filter-active" data-filter-product="todos">Todos</button>
+        <button class="btn__filter" data-filter-product="paes">Pães</button>
+        <button class="btn__filter" data-filter-product="bolos">Bolos</button>
+        <button class="btn__filter" data-filter-product="salgados">Salgados</button>
+      </div>
       <div class="product__cards__inner">
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="paes">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/pães/pão-caseiro-tradicional.jpg" alt="Pão caseiro" />
           </div>
@@ -190,7 +197,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="paes">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/pães/pão-de-calabresa.jpeg" alt="Pão de calabresa" />
           </div>
@@ -204,21 +211,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
-          <div class="product__card__image-box imageCard">
-            <img src="/assets/imagens/home/produtos/pães/pão-de-milho.jpg" alt="Pão de milho" />
-          </div>
-          <div class="product__card__content">
-            <h2 class="title">Pão de milho</h2>
-            <a onclick="location.href='javascript:void()'" class="order order-3 order-btn disabled">
-              Solicitar pedido
-              <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="bolos">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/bolos/bolo-de-macaxeira.jpg" alt="Bolo de macaxeira" />
           </div>
@@ -232,7 +225,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="bolos">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/bolos/bolo-de-tapioca.jpeg" alt="Bolo de tapioca" />
           </div>
@@ -246,7 +239,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="bolos">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/bolos/bolo-de-milho.jpg" alt="Bolo de milho" />
           </div>
@@ -260,7 +253,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="salgados">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/salgados/coxinha-de-frango.jpg" alt="Coxinha de frango" />
           </div>
@@ -274,7 +267,7 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="salgados">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/salgados/esfirra-de-carne.jpg" alt="Esfirra de carne" />
           </div>
@@ -288,12 +281,12 @@
             </a>
           </div>
         </div>
-        <div class="product__card__item">
+        <div class="product__card__item" data-filter-product="salgados">
           <div class="product__card__image-box imageCard">
             <img src="/assets/imagens/home/produtos/salgados/salgado-Joelho.jpeg" alt="Salgado Joelho" />
           </div>
           <div class="product__card__content">
-            <h2 class="title">Salgado Joelho</h2>
+            <h2 class="title">Enroladinho de presunto com queijo</h2>
             <a onclick="location.href='javascript:void()'" class="order order-9 order-btn disabled">
               Solicitar pedido
               <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
@@ -305,7 +298,7 @@
       </div>
     </div>
     
-    <div id="combos" class="container-text bg__text__two bgTitle">
+    <!-- <div id="combos" class="container-text bg__text__two bgTitle">
       <h2 class="title__combos">Combos Pães d'Casa</h2>
     </div>
 
@@ -378,7 +371,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
     <section class="section-two banner-two banner-section-two">
       <div class="container-two banner-column-two">

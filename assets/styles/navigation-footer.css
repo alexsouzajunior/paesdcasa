@@ -1,17 +1,17 @@
 header {
-  height: max-content;
-}
-
-header nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--nav-color);
-  padding: 10px 40px 10px;
   z-index: 20;
+}
+
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--nav-color);
+  padding: 10px 40px 10px;
+  box-shadow: 2px 3px 5px rgba(0 0 0 / 10%);
 }
 
 header .logo h1 {
